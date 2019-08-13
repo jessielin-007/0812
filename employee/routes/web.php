@@ -17,3 +17,9 @@
 
 Route::get('/', "EmployeesController@index");
 Route::get('/employees', "EmployeesController@index");
+// Route::get('/employees/edit/{id}', function() {
+//     return 'abc';
+// });
+
+Route::get('/employees/edit/{id}', "EmployeesController@edit");
+Route::post('/employees/edit/{id}', "EmployeesController@update");
