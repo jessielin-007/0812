@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Exercises</title>
+	
+<script>
+
+var data = "Global Data";
+
+function Button1_onclick() {
+	// txt2.value = txt1.value;
+	
+	//110 接字
+	// var userName = txt1.value;
+	// userName = "Hello! " + userName;
+	// txt2.value = userName;
+
+	//120 全域 & 區域
+	// var data = "local data";
+	// txt1.value = window.data;
+	// txt2.value = data;
+
+	//130 數字 & 字串型態 合併結果
+	// var nTest;
+	// nTest = new Number("122.5") + 1  // A
+	// nTest = new Number(122.5) + 1  // B
+	// nTest = 122.5 + 1  // C
+	// nTest = "122.5" + 1  // D
+	// txt2.value = nTest;
+
+	//140 JS浮點數計算問題 https://github.com/camsong/blog/issues/9
+	// var x = 0.1;
+	// var y = 0.2;
+	// txt1.value = x + y;  // A
+	// txt2.value = (x * 10000 + y * 10000) / 10000  // B
+
+	//150 取區間字串
+	// var s = new String("0123456789中文字");
+	// var s = "0123456789中文字"
+	// txt1.value = s.length;  // A
+	// txt2.value = s.substr(2, 5);  // B
+
+	//160 字串索引
+	// var s = new String("0123456789中文字");
+	// var s = "0123456789中文字"
+	// txt1.value = s.indexOf("567");  // A
+	// txt2.value = s.indexOf("543");  // B
+
+	//210 搜尋字串
+	// var s = "0123456789中文字";
+	// var position = s.indexOf("567");
+	// if (position >= 0) {
+	// 	txt1.value = "found";	
+	// }
+	// else {
+	// 	txt1.value = "not found";
+	// }
+
+	//220 判斷JS資料型態 true false
+	// var test = true;   // A
+	// var test = 0;      // B
+	// var test = 3 > 0;  // C
+	// var test = "";     // D
+	// var test = null;   // E
+	
+	// if (test) {
+	// 	txt1.value = "Yes";	
+	// }
+	// else {
+	// 	txt1.value = "No";
+	// }	
+
+	//230 迴圈12345 的兩種使用方法
+	// A
+	var line = "";
+	var i = 1;
+	while (i <= 5) {
+		line = line + i.toString();
+		i = i + 1;
+	}
+	txt1.value = line;	
+	
+	// B
+	var line = "";
+	for (var i = 1; i <= 5; i++) {
+		line = line + i.toString();
+	}
+	txt2.value = line;
+
+}
+
+</script>
+
+
+</head>
+<body>
+ 	txt1:
+	<input type="text" id="txt1" name="txt1" value="World" PlaceHolder="Keyin something" size="40">
+	<br><br>
+	<input type="button" id="Button1" name="Button1"   
+		value="2. 點我一下，執行 JavaScript" onclick="Button1_onclick()">
+	<br><br>
+	txt2:
+    <INPUT type="text" id="txt2"  name="txt2" value="Result" size="40">
+    <br>
+    <div id="debug"></div>
+</body>
+</html>

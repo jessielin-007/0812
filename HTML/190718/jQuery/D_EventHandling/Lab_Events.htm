@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+        function console(obj)
+        {
+            $("#report").append(obj + "<br>");
+        }
+
+        //待瀏覽器加載完成後執行
+        $(document).ready(function () {
+            // 在這裏寫程式
+            //$("selector") 選擇器
+            //$(reference)  物件參考
+            //$("<li></li>").text("").addClass("").appendTo("#") 新增元素
+
+            // $("#btnTry").click(function (){
+            //     // alert("ok");
+            //     console(Date());
+            // })
+
+            // $("#btnTry").on("click", function (){
+            //     console(Date() + " -- ver 2.");
+            // })
+
+            $("#btnTry").on("click", function (){
+                console(Date() + " -- ver 2.");
+                $("#panda").prop("src", "panda2.jpg");
+            })
+
+            //on 指定元素效果
+            $("#panda").on( {
+                "mouseover":
+                function () { 
+                    $("#panda").attr("src", "panda2.jpg");  
+                    console("mouse enter image");
+                },
+                "mouseout":
+                function () { 
+                    $("#panda").attr("src", "panda1.jpg");  
+                    console("mouse leave image");
+                }
+            });
+
+            //off 取消掉屬性效果
+            $("#btnOff").click( 
+                function () { 
+                    $("#panda").off("mouseover");
+                    $("#panda").off("mouseout");
+                }  
+            );
+
+    
+            
+            
+        });
+    </script>
+</head>
+<body>
+
+<img id="panda" src="panda1.jpg">
+
+<div id="report">Report:<br></div>
+<hr>
+<form action="" method="put" onsubmit="return false;">
+  <button type="button" id="btnTry">Try</button>
+  <button type="button" id="btnOff">Off</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+p {
+    color: grey;
+    font-size: 1em;
+}
+.lucky {
+    color: darkred;
+}
+.boldstyle{
+    font-weight: bold;
+    font-style: italic;
+}
+#c4 {
+    color: orange;
+}

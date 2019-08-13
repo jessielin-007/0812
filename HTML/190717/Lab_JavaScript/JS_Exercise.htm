@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Exercises</title>
+<script>	
+function Button1_onclick() {
+	// A
+	var line = "";
+	for (var i = 1; i <= 5; i++) {
+		line = line + "*";
+	}
+	txt1.value = line;
+	
+	// B
+	txt2.value = getLine(3, "*");
+}
+
+function getLine(count, what) {
+	var line = "";
+	for (var i = 1; i <= count; i++) {
+		line = line + what;
+	}
+	return line;
+}
+</script>
+
+
+</head>
+<body>
+ 	txt1:
+	<input type="text" id="txt1" name="txt1" value="World" PlaceHolder="Keyin something" size="40">
+	<br><br>
+	<input type="button" id="Button1" name="Button1"   
+		value="2. 點我一下，執行 JavaScript" onclick="Button1_onclick()">
+	<br><br>
+	txt2:
+    <INPUT type="text" id="txt2"  name="txt2" value="Result" size="40">
+    <br>
+    <div id="debug"></div>
+</body>
+</html>

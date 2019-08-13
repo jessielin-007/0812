@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.toast.css">
+
+    <style>
+        .form1{
+            margin: 0 0  40px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- HTML 內容放這邊 -->
+        <div class="form1">
+            <form method="POST" action="echo.php">
+                <input type="date">   <!-- 瀏覽器不一定支持，不建議使用   -->
+                <input type="color">  <!-- 瀏覽器不一定支持，不建議使用   -->  
+                <input type="text"> 
+    
+                <!-- 多選(checkbox)或單選(radio)按鈕若未勾選，不會送出資料 -->
+                <input type="checkbox" id="noticeId" name="noticeName" value="yes"> <!-- name 是針對後端收到的資料 -->
+                <label for="noticeId">Notice</label>
+                <hr>
+                <input type="radio" name="groupA"> A1
+                <input type="radio" name="groupA"> A2
+                <input type="radio" name="groupA"> A3
+                <hr>
+                <input type="radio" name="groupB"> B1
+                <input type="radio" name="groupB"> B2
+                <input type="radio" name="groupB"> B3
+    
+                <select name="city" id="citySelector">
+                    <option value="2">Taipei</option>
+                    <option value="4">Taichung</option>
+                    <option value="6">Tainan</option>
+                </select>
+    
+                <input type="submit" name="okButton" value="OK">
+            </form>
+        </div>
+      
+
+        <form>
+            <label for="userNameTextBox">
+                <span class="glyphicon glyphicon-user"></span> 
+                帳號
+            </label>
+            <input type="text" 
+                   id="userNameTextBox" 
+                   placeholder="輸入帳號或E-mail" />
+        </form>
+
+
+
+
+
+    </div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.toast.js"></script>
+
+<script>
+    
+// init.
+$(function () {
+
+    // Lab 程式:
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})  // end of init.
+
+</script>
+
+</body>
+</html>
